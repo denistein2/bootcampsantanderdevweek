@@ -3,7 +3,7 @@
 Java RESTFul API Criada para a Santander DevWeek 2024
 
 ## Diagrama de Classes
-'''mermaid
+```mermaid
 classDiagram
     class User {
         -String name
@@ -39,4 +39,4 @@ classDiagram
     User --> Feature
     User --> Card
     User --> News
-'''
+```
