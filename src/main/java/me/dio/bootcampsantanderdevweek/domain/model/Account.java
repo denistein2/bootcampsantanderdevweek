@@ -16,7 +16,7 @@ public class Account {
 
     private String agency;
 
-    @Column( precision = 2, scale = 13)
+    @Column(nullable = false, precision = 2, scale = 13)
     private BigDecimal balance;
 
     public String getAgency() {
@@ -43,7 +43,7 @@ public class Account {
     public void setLimit(BigDecimal limit) {
         this.limit = limit;
     }
-
+@Column(name = "additional_limit", scale = 13, precision = 2)
     private BigDecimal limit;
 
     public String getNumber() {
@@ -65,16 +65,6 @@ public class Account {
         this.id = id;
     }
 
-
-    @Override
-    public String toString() {
-        return "Account{" +
-                "number='" + number + '\'' +
-                ", agency='" + agency + '\'' +
-                ", balance=" + balance +
-                ", limit=" + limit +
-                '}';
-    }
 }
 
 

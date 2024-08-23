@@ -1,37 +1,11 @@
 package me.dio.bootcampsantanderdevweek.domain.model;
 
-public class News {
-    private String icon;
-    private String description;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-    // Construtor
-    public News(String icon, String description) {
-        this.icon = icon;
-        this.description = description;
-    }
+@Entity(name = "tb_news")
+public class News extends BaseItem {
 
-    // Getters e Setters
-    public String getIcon() {
-        return icon;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @Override
-    public String toString() {
-        return "News{" +
-                "icon='" + icon + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

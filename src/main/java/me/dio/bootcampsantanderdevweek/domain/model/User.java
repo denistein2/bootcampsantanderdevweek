@@ -28,15 +28,6 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<News> news;
 
-    // Construtor
-    public User(String name, Account account, List<Feature> features, Card card, List<News> news) {
-        this.name = name;
-        this.account = account;
-        this.features = features;
-        this.card = card;
-        this.news = news;
-    }
-
     public Long getId() {
         return id;
     }
@@ -86,14 +77,5 @@ public class User {
         this.news = news;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", account=" + account +
-                ", features=" + features +
-                ", card=" + card +
-                ", news=" + news +
-                '}';
-    }
+
 }
